@@ -40,8 +40,8 @@ class MyTestCase(unittest.TestCase):
     def test_zscore(self):
          self.assertEqual(self.statistics.confidence(), 0.2232581)
 
-    def test
-
+    def test_samplestand(self):
+        self.assertEqual(self.statistics.confidence(), 0.2232581)
 
 
 if __name__ == '__main__':

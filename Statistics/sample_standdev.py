@@ -1,4 +1,4 @@
-=def samplestand(data,simple_size):
+def samplestand(data,sample_size):
 
     dev=0
 

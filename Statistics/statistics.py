@@ -7,7 +7,8 @@ from Statistics.vpop import vpop
 from Statistics.popuvar import popuvar
 from CsvReader.CsvReader import CsvReader
 from Statistics.samplemean import sample_mean
-from Statistics.z-score import zscore
+from Statistics.z_score import zscore
+from Statistics.sample_standdev import samplestand
 
 class Statistics(Calculator):
     data = []
@@ -77,5 +78,12 @@ class Statistics(Calculator):
         for row in self.data.data:
             d.append(row['v'])
         self.result = zscore(d)
+        return self.result
+
+    def samplestand(self):
+        d = []
+        for row in self.data.data:
+            d.append(row['v'])
+        self.result = samplestand(d)
         return self.result
 
