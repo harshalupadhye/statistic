@@ -1,3 +1,8 @@
+from Statistics.mean import mean
+from Statistics.sample_standdev import samplestand
+from Calculator.subtraction import subtraction
+from Calculator.division import division
+
 def zscore(data):
 
     x=64

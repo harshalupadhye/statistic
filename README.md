@@ -1,36 +1,1 @@
-in this project we are going to implement statistical calcuator
-
-1).Jay patel
-
-2).Harshal Upadhyaye
-
-list of methods we are going to implement
-1)Population Mean
-
-2)Median
-
-3)Mode
-
-4)Population Standard Deviation
-
-5)Variance of population proportion
-
-6)Z-Score
-
-7)Standardized score
-
-8)Population Correlation Coefficient
-
-9)Confidence Interval
-
-10)Population Variance
-
-11)P Value
-
-12)Proportion
-
-13)Sample Mean
-
-14)Sample Standard Deviation
-
-15)Variance of sample proportion
+﻿﻿﻿﻿﻿﻿﻿This repo is for the mini project 2 of the class 601 section 101. This repo creates a calculator to calculate different statistical functions#Contributors:Jay PatelHarshal Upadhye#Homework DescriptionFor this program you need to work in a team of 2-3 to create a statistical calculator. In this project you need to either decorate or extend the calculator class you previously created individually. For each calculation you need to create at least one test to check for the correct value and another test to check for invalid input. Invalid input should throw an exception with a description of the problem.#Statistical Functions:**Population Mean****Median****Mode****Population Standard Deviation****Variance of population proportion****Z-Score****Standardized score****Population Correlation Coefficient****Confidence Interval****Population Variance****P Value****Proportion****Sample Mean****Sample Standard Deviation****Variance of sample proportion**#Directions:The different sections are depicted in the different files as mentioned below:#Calculator: Contains the definition files and the calculator file#CsvReader: Contains all the functions required for reading csv files#Tests: Contains all the test files and the data files.#To do list: Create Repo Design and update project skeleton Write the csv reader Write the definition files Write the test suite Final update(fix) to the README file Submit github link to the assignment in Canvas

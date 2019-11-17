@@ -57,5 +57,8 @@ class MyTestCase(unittest.TestCase):
             print("Variance of Sample Proportion has Assertion Error:", e)
 
 
+    def test_standardised_score(self):
+        self.assertListEqual(self.statistics.zscore(), 0.2232581)
+
 if __name__ == '__main__':
     unittest.main()

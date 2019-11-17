@@ -1,3 +1,13 @@
+from random import sample
+from Statistics.mean import mean
+from Calculator.subtraction import subtraction
+from Calculator.square import square
+from Calculator.addition import addition
+from Calculator.division import division
+from Calculator.squareroot import squareroot
+
+
+
 def samplestand(data,sample_size):
 
     dev=0
@@ -6,7 +16,7 @@ def samplestand(data,sample_size):
 
     x_bar=mean()
     x=sample_values
-    n=subtract(sample_values,1)
+    n=subtraction(sample_values,1)
     for dev in sample:
         dev=subtraction(x,x_bar)
         sqaure_x_bar=square(dev)
