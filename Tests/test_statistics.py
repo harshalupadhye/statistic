@@ -37,6 +37,12 @@ class MyTestCase(unittest.TestCase):
     def test_sample_mean(self):
          self.assertEqual(self.statistics.sample_mean(), 4)
 
+    def test_zscore(self):
+         self.assertEqual(self.statistics.confidence(), 0.2232581)
+
+    def test
+
+
 
 if __name__ == '__main__':
     unittest.main()

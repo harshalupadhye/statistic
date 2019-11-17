@@ -1,5 +1,5 @@
 import unittest
-from Tests.decorators import do_twice
+from Decorators.decorators import do_twice
 import pprint
 
 
