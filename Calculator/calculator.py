@@ -35,3 +35,6 @@ class Calculator:
     def square_rt(self, a):
         self.result = squareroot(a)
         return round(float(self.result), 7)
+
+    def variance_sample_proportion(self, my_pop):
+        pass

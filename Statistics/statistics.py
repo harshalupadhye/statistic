@@ -6,6 +6,10 @@ from Statistics.popstand import popstand
 from Statistics.vpop import vpop
 from Statistics.popuvar import popuvar
 from CsvReader.CsvReader import CsvReader
+from Statistics.samplemean import sample_mean
+from Statistics.z_score import zscore
+from Statistics.sample_standdev import samplestand
+from Statistics.proportion import prop
 
 class Statistics(Calculator):
     data = []
@@ -62,3 +66,33 @@ class Statistics(Calculator):
              d.append(row['v'])
          self.result = popuvar(d)
          return self.result
+
+    def sample_mean(self):
+        d = []
+        for row in self.data.data:
+            d.append(row['v'])
+        self.result = sample_mean(d)
+        return self.result
+
+    def zscore(self):
+        d = []
+        for row in self.data.data:
+            d.append(row['v'])
+        self.result = zscore(d)
+        return self.result
+
+    def samplestand(self):
+        d = []
+        for row in self.data.data:
+            d.append(row['v'])
+        self.result = samplestand(d)
+        return self.result
+
+    def prop(self):
+        d = []
+        for row in self.data.data:
+            d.append(row['v'])
+        self.result = prop(d)
+        return self.result
+
+
