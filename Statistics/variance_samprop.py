@@ -1,20 +1,7 @@
-from Calculator.addition import addition
-from Calculator.subtraction import subtraction
-from Calculator.multiplication import multiplication
-from Calculator.division import division
-from Calculator.square import square
-from Calculator.squareroot import squareroot
-from Statistics.popstand import psd
-from Statistics.mean import mean
+from pprint import pprint
+from Statistics.proportion import prop
+from Statistics.popuvar import popuvar
 
-
-def var_sample_prop(numbers, size):
-    result = 0
-    data = dataList(numbers, size)
-    num_value = len(data)
-    result1 = prop(numbers)
-    result2 = subtraction(1, result1)
-    result3 = subtraction(num_value, 1)
-    for data2 in data:
-        result4 = multiplication(result1, result2)
-    return division(result4, result3)
+def Variance_sample_proportion(my_pop):
+    p,proportion_success= prop(my_pop)
+    return popuvar(proportion_success)

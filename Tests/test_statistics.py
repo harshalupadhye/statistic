@@ -1,6 +1,7 @@
 import unittest
 
 from Statistics.statistics import Statistics
+from CsvReader.CsvReader import CsvReader
 
 
 class MyTestCase(unittest.TestCase):
@@ -45,6 +46,17 @@ class MyTestCase(unittest.TestCase):
 
     def test_prop(self):
         self.assertEqual(self.statistics.prop(), 1.6)
+
+    def test_variance_sample_proportion(self):
+        my_pop = CsvReader("statistics.csv")
+        try:
+            self.assertEqual(self.calculator.variance_sample_proportion(my_pop),
+                             read_answer("answer_variance_sample_proportion.csv"))  # positive test
+            self.assertNotEqual(self.calculator.variance_sample_proportion(my_population),
+                                (read_answer("answer_variance_sample_proportion.csv") + 1))  # negative test
+        except AssertionError as e:
+            print("Variance of Sample Proportion has Assertion Error:", e)
+            assert 0
 
 
 if __name__ == '__main__':
