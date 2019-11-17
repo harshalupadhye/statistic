@@ -31,6 +31,8 @@ class MyTestCase(unittest.TestCase):
     def test_confidence(self):
          self.assertEqual(self.statistics.confidence(), 0.2232581)
 
+    def test_popuvar(self):
+         self.assertEqual(self.statistics.confidence(), 0.2232581)
 
 if __name__ == '__main__':
     unittest.main()

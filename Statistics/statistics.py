@@ -4,6 +4,7 @@ from Statistics.median import median
 from Statistics.mode import mod
 from Statistics.popstand import popstand
 from Statistics.vpop import vpop
+from Statistics.popuvar import popuvar
 from CsvReader.CsvReader import CsvReader
 
 class Statistics(Calculator):
@@ -53,4 +54,11 @@ class Statistics(Calculator):
          for row in self.data.data:
              d.append(row['v'])
          self.result = popstand(d)
+         return self.result
+
+    def popuvar(self):
+         d = []
+         for row in self.data.data:
+             d.append(row['v'])
+         self.result = popuvar(d)
          return self.result
