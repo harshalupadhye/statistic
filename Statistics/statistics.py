@@ -6,6 +6,7 @@ from Statistics.popstand import popstand
 from Statistics.vpop import vpop
 from Statistics.popuvar import popuvar
 from CsvReader.CsvReader import CsvReader
+from Statistics.samplemean import sample_mean
 
 class Statistics(Calculator):
     data = []
@@ -62,3 +63,10 @@ class Statistics(Calculator):
              d.append(row['v'])
          self.result = popuvar(d)
          return self.result
+
+    def sample_mean(self):
+        d = []
+        for row in self.data.data:
+            d.append(row['v'])
+        self.result = sample_mean(d)
+        return self.result
