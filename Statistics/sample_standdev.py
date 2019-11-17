@@ -8,7 +8,7 @@ from Calculator.squareroot import squareroot
 
 
 
-def samplestand(data,sample_size):
+def samplestand(data):
 
     dev=0
 
