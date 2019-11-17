@@ -3,7 +3,7 @@ from Statistics.mean import mean
 from Statistics.median import median
 from Statistics.mode import mod
 from Statistics.popstand import popstand
-#from Statistics.Vpp import vpp
+from Statistics.vpop import vpop
 from CsvReader.CsvReader import CsvReader
 
 class Statistics(Calculator):
@@ -41,9 +41,9 @@ class Statistics(Calculator):
          self.result = popstand(d)
          return self.result
 
-    #def vpp(self):
-    #    d = []
-    #    for row in self.data.data:
-    #       d.append(row['v'])
-    #    self.result = vpp(d)
-    #    return self.result
+    def vpop(self):
+         d = []
+         for row in self.data.data:
+            d.append(row['v'])
+         self.result = vpop(d)
+         return self.result

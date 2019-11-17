@@ -19,14 +19,14 @@ class MyTestCase(unittest.TestCase):
     def test_median(self):
         self.assertEqual(self.statistics.median(), 4)
 
-    #def test_mode(self):
-   #     self.assertEqual(self.statistics.mod(), 1)
+    def test_mode(self):
+         self.assertEqual(self.statistics.mod(), 1)
 
-    #def test_psd(self):
-    #    self.assertEqual(round(self.statistics.psd(), 4), 0.2233)
+    def test_popstand(self):
+        self.assertEqual(round(self.statistics.popstand(), 4), 0.2233)
 
-    #def test_vpp(self):
-    #    self.assertEqual(self.statistics.vpp(), 0.0498442)
+    def test_vpop(self):
+         self.assertEqual(self.statistics.vpop(), 0.0498442)
 
 
 if __name__ == '__main__':
