@@ -1,12 +1,13 @@
 import unittest
 from Calculator.calculator import Calculator
 from Statistics.statistics import Statistics
-from CsvReader.CsvReader import CsvReader
+from CsvReader.readpop import read_pop
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.statistics = Statistics('Tests/Data/statistics.csv')
+        self.calculator=Calculator()
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -49,15 +50,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_variance_sample_proportion(self):
         my_pop = read_pop("Variance.csv")
-        # expected_output = read_answer("answer_variance_sample_proportion.csv")
         try:
-            self.assertEqual(self.calculator.variance_sample_proportion(my_pop),
-                             read_answer("answer_variance_sample_proportion.csv"))  # positive test
-            self.assertNotEqual(self.calculator.variance_sample_proportion(my_pop),
-                                (read_answer("answer_variance_sample_proportion.csv") + 1))  # negative test
+            self.assertEqual(self.calculator.variance_sample_proportion(my_pop),0.0045) # positive test
+            self.assertNotEqual(self.calculator.variance_sample_proportion(my_pop),0.0045+1)   # negative test
         except AssertionError as e:
             print("Variance of Sample Proportion has Assertion Error:", e)
-            assert 0
 
 
 if __name__ == '__main__':
