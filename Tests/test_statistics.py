@@ -28,6 +28,9 @@ class MyTestCase(unittest.TestCase):
     def test_vpop(self):
          self.assertEqual(self.statistics.vpop(), 0.0498442)
 
+    def test_confidence(self):
+         self.assertEqual(self.statistics.confidence(), 0.2232581)
+
 
 if __name__ == '__main__':
     unittest.main()

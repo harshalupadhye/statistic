@@ -47,3 +47,10 @@ class Statistics(Calculator):
             d.append(row['v'])
          self.result = vpop(d)
          return self.result
+
+    def confidence(self):
+         d = []
+         for row in self.data.data:
+             d.append(row['v'])
+         self.result = popstand(d)
+         return self.result
