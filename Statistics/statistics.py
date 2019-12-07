@@ -16,7 +16,7 @@ class Statistics(Calculator):
 
     def __init__(self, filepath):
         self.data = CsvReader(filepath)
-        super().__init__()
+        self().__init__()
 
     def mean(self):
         d = []
